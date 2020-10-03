@@ -26,8 +26,6 @@ class Particle:
 		if mpos[0] >= self.rect.x and mpos[0] <= self.rect.x+self.rect.w and mpos[1] >= self.rect.y and mpos[1] <= self.rect.y+self.rect.h:
 			return True
 
-
-
 class Mouse:
 	def __init__(self):
 		self.is_pressed = False
