@@ -1,5 +1,5 @@
 #Theme: small stuff
- 
+
 class Particle:
 	def __init__(self, x, y, w, h, color, text, font):
 		self.pos = [x, y]
@@ -164,16 +164,16 @@ def main():
 		pygame.display.update()
 		if game_over:
 			run = False
-			for i in range(1, 200, 1):
+			for i in range(1, 200, 2):
 				new_jar = pygame.transform.scale(jar, (round(40*(1+i/10)), round(ratio*40*(1+i/10))))
 				jar_rect = new_jar.get_rect()
 				jar_rect.center = [screen_width//2, screen_height//2]
 				Screen.blit(new_jar, jar_rect)
 				pygame.display.update()
-				pygame.time.delay(1000//60)
-			for i in range(199, 20, -1):
+				pygame.time.delay(1000//30)
+			for i in range(199, 20, -2):
 				Screen.fill((0, 0, 0))
-			
+				
 				new_jar = pygame.transform.scale(jar, (round(40*(1+i/10)), round(ratio*40*(1+i/10))))
 				jar_rect = new_jar.get_rect()
 				jar_rect.center = [screen_width//2, screen_height//2]
@@ -195,7 +195,7 @@ def main():
 				Screen.blit(explanation_text2, explanation_rect2)
 				
 				pygame.display.update()
-				pygame.time.delay(1000//60)
+				pygame.time.delay(1000//30)
 
 			pygame.display.update()
 			pygame.time.delay(5000)
